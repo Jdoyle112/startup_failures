@@ -1,0 +1,32 @@
+<head>
+  <title>startupFails</title>
+</head>
+
+<body>
+  <h1>Post About Your Startup Failures!</h1>
+  <div>
+  	<form class="input-form">
+		<label>Add your story:</label>
+	  	<input type="text" class="heading" name="heading" placeholder="Enter your startups name">
+	  	<textarea type="text" class="text_area" name="text_area" placeholder="Enter the description"></textarea>
+	  	<button type="submit">Enter</button>
+    </form>
+  </div>
+  
+  <div class="lists">
+  	{{#each lists}}
+  		{{> list}}
+  	{{/each}}
+  </div>
+</body>
+
+
+<template name="list">
+
+	<div class="list" data-id="{{ _id }}">
+    <h3 class="text-center">{{ heading }}</h3>
+    <p class="content">{{ text }}</p>
+
+	</div>
+
+</template>
